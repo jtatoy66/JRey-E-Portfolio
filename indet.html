@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .animate-fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .skill-bar {
+            height: 8px;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-indigo-600">My Portfolio</div>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#hero" class="text-gray-700 hover:text-indigo-600 transition">Home</a></li>
+                    <li><a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a></li>
+                    <li><a href="#skills" class="text-gray-700 hover:text-indigo-600 transition">Skills</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-indigo-600 transition">Contact</a></li>
+                </ul>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden">
+                <ul class="space-y-2">
+                    <li><a href="#hero" class="block text-gray-700 hover:text-indigo-600">Home</a></li>
+                    <li><a href="#about" class="block text-gray-700 hover:text-indigo-600">About</a></li>
+                    <li><a href="#skills" class="block text-gray-700 hover:text-indigo-600">Skills</a></li>
+                    <li><a href="#contact" class="block text-gray-700 hover:text-indigo-600">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center min-h-[75vh]">
+            <div class="w-full md:w-1/2 animate-fade-in">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Hi, I'm John Rey Tatoy</h1>
+                <p class="text-xl md:text-2xl mb-6"> Programmer | Computer Science Student</p>
+                <p class="text-lg mb-8">Passionate about building intuitive and impactful digital experiences. Explore my work below.</p>
+                <a href="#projects" class="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">View My Work</a>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center">
+                <img src="images/480001273_634352639291092_2831768881667210797_n.jpg" alt="John Rey Tatoy Picture" class="rounded-lg shadow-xl square-img" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4cb12103-b2f9-48c1-8eb4-3d53352633a0.png'" />
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <img src="images/IMG_20240314_195311_020.jpg" alt="Johnrey Dominant" class="rounded-lg shadow-lg max-w-full h-auto" />
+                </div>
+                <div class="w-full md:w-1/2 md:pl-8">
+                    <p class="text-lg mb-6">With over 4 years of leaning in the field of Modernize technology, My Expertise is continuously growing on being a future programmer, My journey began with a love for coding puzzles and has evolved into delivering scalable, user-centric products for startups and enterprises alike.</p>
+                    <p class="text-lg mb-6">Outside of code, I'm a Gamer, Moon Lover, and Mobile Technician. I believe in continuous learning and collaboration to drive innovation in tech.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-12 text-center">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Programming Languages</h3>
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1"><span>C++</span><span>75%</span></div>
+                        <div class="skill-bar bg-gray-300"><div class="skill-fill" style="width: 75%"></div></div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1"><span>Python</span><span>5%</span></div>
+                        <div class="skill-bar bg-gray-300"><div class="skill-fill" style="width: 5%"></div></div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1"><span>C#</span><span>80%</span></div>
+                        <div class="skill-bar bg-gray-300"><div class="skill-fill" style="width: 80%"></div></div>
+                    </div>
+                    <div>
+                    <h3 class="text-2xl font-semibold mb-4">Microsoft Office</h3>
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1"><span>Excel</span><span>35%</span></div>
+                        <div class="skill-bar bg-gray-300"><div class="skill-fill" style="width: 35%"></div></div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1"><span>Word</span><span>79%</span></div>
+                        <div class="skill-bar bg-gray-300"><div class="skill-fill" style="width: 79%"></div></div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1"><span>PowerPoint</span><span>65%</span></div>
+                        <div class="skill-bar bg-gray-300"><div class="skill-fill" style="width: 65%"></div></div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-12 text-center">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="project-card bg-white rounded-lg shadow p-6">
+                    <img src="images/e7a37c8f-96f2-458b-83ff-f4c0a31f5fd5.jpg" alt="Project 1" class="rounded-lg mb-4 h-40 w-full object-cover" onerror="this.style.display='none'" />
+                    <h3 class="text-xl font-semibold mb-2">APT Delights</h3>
+                    <p class="text-gray-600 mb-4"> To simulate a basic point-of-sale system for a small donut shop using fundamental C++ programming concepts such as conditional statements, switch cases, and user input/output.</p>
+                    
+                </div>
+                <div class="project-card bg-white rounded-lg shadow p-6">
+                    <img src="images/10c914c4-4611-40b7-bf43-cd99a382c772.jpg" alt="Project 2" class="rounded-lg mb-4 h-40 w-full object-cover" onerror="this.style.display='none'" />
+                    <h3 class="text-xl font-semibold mb-2">NC Canteen System</h3>
+                    <p class="text-gray-600 mb-4">A short description of project two. Focused on UI/UX and accessibility.To provide an efficient and reliable system that automates sales operations in the canteen, enhances customer service, and supports accurate financial tracking.</p>
+                    
+                </div>
+                <div class="project-card bg-white rounded-lg shadow p-6">
+                    <img src="images/ae3f8163-4cb6-40c4-baa6-8885a11706b0.jpg" alt="Project 3" class="rounded-lg mb-4 h-40 w-full object-cover" onerror="this.style.display='none'" />
+                    <h3 class="text-xl font-semibold mb-2">NC School Attendance System</h3>
+                    <p class="text-gray-600 mb-4">A system to manage student attendance efficiently. C# program that I managed to create to read a barcode to record students entry on the premises.</p>
+                    
+                </div>
+                                <div class="project-card bg-white rounded-lg shadow p-6">
+                    <img src="images/68973454-fb51-4e58-9d1a-b9c5697d507a.jpg" alt="Project 4" class="rounded-lg mb-4 h-40 w-full object-cover" onerror="this.style.display='none'" />
+                    <h3 class="text-xl font-semibold mb-2">BigBrew POS</h3>
+                    <p class="text-gray-600 mb-4">The BigBrew POS System is a computerized sales application developed in C# to automate the transaction process in the BigBrew shop. It allows users to manage orders, calculate totals and change, and generate receipts efficiently.</p>
+                    
+                </div>
+                                <div class="project-card bg-white rounded-lg shadow p-6">
+                    <img src="images/c8aa657b-7c2a-46c3-b03e-616547007ccc.jpg" alt="Project 5" class="rounded-lg mb-4 h-40 w-full object-cover" onerror="this.style.display='none'" />
+                    <h3 class="text-xl font-semibold mb-2">Gateway System</h3>
+                    <p class="text-gray-600 mb-4">The system is designed for academic institutions to manage student attendance effectively. It covers attendance recording, data importing/exporting, updates, archiving, and dashboard visualization. The system is intended for use by administrators and staff to enhance efficiency, accuracy, and accessibility in attendance tracking.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
+            <p class="text-lg mb-12">Let's collaborate! Reach out for projects, opportunities, or just to connect.</p>
+            <div class="max-w-md mx-auto mb-12">
+                <form id="contact-form" class="space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:outline-none" required>
+                    <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:outline-none" required>
+                    <input type="text" placeholder="Subject" class="w-full p-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:outline-none" required>
+                    <textarea placeholder="Your Message" rows="5" class="w-full p-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:outline-none" required></textarea>
+                    <button type="submit" class="w-full bg-indigo-600 text-white p-3 rounded-lg hover:bg-indigo-700 transition">Send Message</button>
+                </form>
+            </div>
+            <div class="space-y-4">
+                <p class="text-lg">Email: jtatoy66@gmail.com</p>
+                <p class="text-lg">Phone: +63 9480440369 </p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.facebook.com/johnreytatoy66" class="text-indigo-600 hover:text-indigo-800 transition">Facebook</a>
+                    <a href="https://github.com/jtatoy66" class="text-indigo-600 hover:text-indigo-800 transition">Github</a>
+                    <a href="https://www.instagram.com/shadow.y.t_12" class="text-indigo-600 hover:text-indigo-800 transition">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2025 John Rey Tatoy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I’ll get back to you soon.');
+            contactForm.reset();
+        });
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
